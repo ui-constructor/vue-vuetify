@@ -1,6 +1,9 @@
 import { createApp } from 'vue'
+import { registerPlugins } from '@/plugins'
 import App from './App.vue'
 
-import './style.scss'
+import '@/assets/scss/style.scss'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+registerPlugins(app)
+app.mount('#app')
